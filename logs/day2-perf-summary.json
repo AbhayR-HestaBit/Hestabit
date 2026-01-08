@@ -1,0 +1,19 @@
+{
+Workers_1:
+	{
+		"Time_sec":0.61,
+		"Rss_mb":16.4284,
+		"cpu_pct":116
+	},
+Workers_4:
+	{
+		"Time_sec":0.65,
+		"Rss_mb":19.1404,
+		"cpu_pcat":129
+	},
+Workers_8:
+	{
+		"Time_sec":0.62,
+		"Rss_mb":23.4744,
+		"cpu_pcat":169
+	}

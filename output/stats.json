@@ -1,0 +1,50 @@
+{
+  "file": "data/corpus.txt",
+  "workers": 8,
+  "totalWords": 250000,
+  "uniqueWords": 250000,
+  "longestWord": "word100000",
+  "shortestWord": "word0",
+  "topWords": [
+    [
+      "word0",
+      1
+    ],
+    [
+      "word1",
+      1
+    ],
+    [
+      "word2",
+      1
+    ],
+    [
+      "word3",
+      1
+    ],
+    [
+      "word4",
+      1
+    ],
+    [
+      "word5",
+      1
+    ],
+    [
+      "word6",
+      1
+    ],
+    [
+      "word7",
+      1
+    ],
+    [
+      "word8",
+      1
+    ],
+    [
+      "word9",
+      1
+    ]
+  ]
+}

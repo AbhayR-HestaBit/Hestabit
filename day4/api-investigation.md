@@ -8,7 +8,7 @@ worked on understanding how http request actually works from client to server an
 ```day4/
 ├── server.js
 ├── api-investigation.md
-├──screenshots
+├──screenshots (working with postman)
 ├──curl-lab.txt```
 
 ## Network and DNS Investigation

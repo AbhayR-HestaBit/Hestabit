@@ -1,10 +1,9 @@
-#!/bin/bash
-set -e
+#!/bin/sh
+
 
 echo "running validation..."
 
-node -c server.js
-npx eslint .
-npx prettier --check .
+npm run lint
+npm run format:check
 
 echo "validation passed"

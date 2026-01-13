@@ -1,6 +1,6 @@
 {
   "file": "data/corpus.txt",
-  "workers": 1,
+  "workers": 8,
   "totalWords": 250000,
   "uniqueWords": 250000,
   "longestWord": "word100000",

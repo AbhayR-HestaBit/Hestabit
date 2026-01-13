@@ -11,3 +11,10 @@ week2-frontend/
 │
 └── README.md
 ```
+## Day-1 HTML 5 Semantic Layout
+
+- Built a complete blog page using semantic HTML5
+- Used header, nav, main, section, article, aside, footer
+- Structured content based on real blog layout
+- Used figure and figcaption as offline-safe image placeholders
+- Ensured logical heading hierarchy and readable document structure

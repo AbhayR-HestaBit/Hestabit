@@ -13,7 +13,7 @@ Codename:	noble
 
 Image:
 
-![[Pasted image 20260106194818.png]]
+![kernel info](screenshots/Pasted image 20260106194818.png)
 ##Kernel Information
 
 Raw commands:
@@ -44,7 +44,7 @@ There is NO WARRANTY, to the extent permitted by law.
 
 Image:
 
-![[Pasted image 20260106195245.png]]
+![Shell info ](screenshots/Pasted image 20260106195245.png)
 
 ##PATH Inspection
 
@@ -65,7 +65,7 @@ abhayrajput@hestabit-LP:~$ echo $PATH | tr ':' '\n'
 
 Image:
 
-![[Pasted image 20260106195612.png]]
+![Path inspection](screenshots/Pasted image 20260106195612.png)
 
 ##Node & NVM Status
 
@@ -80,4 +80,4 @@ abhayrajput@hestabit-LP:~$ npm --version
 
 Image:
 
-![[Pasted image 20260106195734.png]]
+![Node and nvm](Pasted image 20260106195734.png)

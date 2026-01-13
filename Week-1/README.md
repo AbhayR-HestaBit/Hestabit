@@ -2,43 +2,39 @@
 
 ## Folder Structure
 
-Below is the required Directory Structure to navigate:
+Below is the required directory structure to navigate:
 
+```text
 week1/
 ├── day1/
-│ ├── README.md
-│ ├── system-report.md
-│ ├── introspect.js
-│ └── logs/
-│
+│   ├── README.md
+│   ├── system-report.md
+│   ├── introspect.js
+│   └── logs/
 ├── day2/
-│ ├── README.md
-│ ├── wordstat.js
-│ ├── corpus.txt
-│ ├── output/
-│ └── logs/
-│
+│   ├── README.md
+│   ├── wordstat.js
+│   ├── corpus.txt
+│   ├── output/
+│   └── logs/
 ├── day3/
-│ ├── log.js
-│ ├── app.log
-│ └── README.md
-│
+│   ├── log.js
+│   ├── app.log
+│   └── README.md
 ├── day4/
-│ ├── server.js
-│ ├── curl-lab.txt
-│ ├── api-investigation.md
-│ └── README.md
-│
+│   ├── server.js
+│   ├── curl-lab.txt
+│   ├── api-investigation.md
+│   └── README.md
 ├── day5/
-│ ├── app.js
-│ ├── validate.sh
-│ ├── config.json
-│ ├── artifacts/
-│ ├── .husky/
-│ └── README.md
-│
+│   ├── app.js
+│   ├── validate.sh
+│   ├── config.json
+│   ├── artifacts/
+│   ├── .husky/
+│   └── README.md
 └── WEEK1-RETRO.md
-
+```
 ---
 
 ### Day 1 — System & Runtime Understanding

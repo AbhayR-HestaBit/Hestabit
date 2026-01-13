@@ -13,7 +13,7 @@ Codename:	noble
 ```
 Image:
 
-![kernel info](screenshots/Pasted image 20260106194818.png)
+![kernel info](screenshots/20260106194818.png)
 
 ## Kernel Information
 
@@ -24,7 +24,7 @@ Linux hestabit-LP 6.14.0-27-generic #27~24.04.1-Ubuntu SMP PREEMPT_DYNAMIC Tue J
 ```
 Image:
 
-![Kernel-info](screenshots/Pasted image 20260106195029.png)
+![Kernel-info](screenshots/20260106195029.png)
 
 ## Shell Information 
 
@@ -45,7 +45,7 @@ There is NO WARRANTY, to the extent permitted by law.
 ```
 Image:
 
-![Shell info ](screenshots/Pasted image 20260106195245.png)
+![Shell info ](screenshots/20260106195245.png)
 
 ## PATH Inspection
 
@@ -66,7 +66,7 @@ abhayrajput@hestabit-LP:~$ echo $PATH | tr ':' '\n'
 ```
 Image:
 
-![Path inspection](screenshots/Pasted image 20260106195612.png)
+![Path inspection](screenshots/0260106195612.png)
 
 ## Node & NVM Status
 
@@ -81,4 +81,4 @@ abhayrajput@hestabit-LP:~$ npm --version
 ```
 Image:
 
-![Node and nvm](screenshots/Pasted image 20260106195734.png)
+![Node and nvm](screenshots/20260106195734.png)

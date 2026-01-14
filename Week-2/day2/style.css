@@ -1,0 +1,137 @@
+* { box-sizing: border-box; }
+
+body {
+margin: 0;
+padding: 20px;
+font-family: sans-serif;
+background: rgba(17, 17, 17, 0.067);
+}
+
+/*header {
+color: white;
+padding: 20px;
+display: flex;
+align-items: center;
+heright: 80px;
+}*/
+
+section[aria-label="Top layout"] {
+display: flex;
+flex-direction: column;
+gap: 16px;
+}
+
+section[aria-label="Top layout"] h1{
+margin: 0;
+}
+section[aria-label="Top layout"] header {
+flex: 1;
+background: rgb(15, 23, 42);
+color: white;
+/*padding: 20px;not good for responsiveness*/ 
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+section[aria-label="Top layout"] nav {
+flex: 3;
+background: rgb(239, 68, 68);
+color: white;
+/*padding: 20px;*/
+display: flex;
+justify-content: center;
+}
+
+/*nav {
+background: #ef4444;
+color: white;
+padding: 20px;
+} not valid for responsive ness*/
+
+/*header, nav {
+align-items: center;
+justify-content: center;
+height: 80px;
+}
+not needed when already have assigned properties to same tags*/
+section[aria-label="Hero"] {
+background: rgb(79, 131, 194);
+color: white;
+min-height: 200px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 20px 0;
+}
+
+section[aria-label="Content Area"] {
+display: flex;
+flex-direction: column;
+gap: 2rem;
+}
+
+main {
+background: rgb(31, 42, 68);
+color: white;
+flex: 2;
+min-height: 200px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin-bottom: 1.5rem:
+}
+
+section[aria-label="Side Content"] {
+display: flex;
+flex: 1;
+flex-direction: column;
+gap: 1.5rem;
+}
+
+section[aria-label="Image"] {
+background: rgb(204, 238, 238);
+min-height: 90px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+section[aria-label="Extra"] {
+background: rgb(52, 211, 153);
+min-height: 90px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+section[aria-label="Banner"] {
+background: rgb(250, 204, 21);
+margin-top: 20px;
+min-height: 80px;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+section[aria-label="Top layout"] header,
+section[aria-label="Top layout"] nav {
+padding: 12px;
+}
+
+@media (min-width: 768px) {
+section[aria-label="Top layout"]{
+flex-direction:row;
+gap: 12px;
+}
+section[aria-label="Top layout"] header,
+section[aria-label="Top layout"] nav {
+height: 80px;
+padding: 20px;
+}
+
+section[aria-label="Content Area"] {
+flex-direction:row;
+gap: 5rem;
+}
+}

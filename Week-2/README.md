@@ -5,8 +5,14 @@
 ```text
 week2-frontend/
 │
-├── day1-html/
+├── day1/
 │   ├── blog.html
+│   └── README.md
+│
+├── day2/
+│   ├── index.html
+│   ├── style.css
+│   ├── screenshots/
 │   └── README.md
 │
 └── README.md

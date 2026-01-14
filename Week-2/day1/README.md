@@ -11,3 +11,8 @@
 - Used header, nav, main, section, article, aside, footer
 - Used figure and figcaption as offline-safe image placeholders
 - Ensured logical heading hierarchy and readable document structure
+
+### Unicodes used:
+- for © is `u00A9`
+- for — is `u2014`
+- for · is `u00B7`

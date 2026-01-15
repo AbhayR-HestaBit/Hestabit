@@ -1,0 +1,28 @@
+* { box-sizing: border-box; }
+
+body {
+font-family: sans-serif;
+padding: 20px;
+}
+
+.faq {
+margin-bottom: 12px;
+}
+
+.question {
+width: 100%;
+text-align: left;
+padding: 12px;
+font-size: 16px;
+cursor: pointer;
+}
+
+.answer {
+display: none;
+padding: 12px;
+border-left: 2px solid #000;
+}
+
+.faq.active .answer {
+display: block;
+}

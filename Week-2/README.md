@@ -39,3 +39,9 @@ week2-frontend/
 - Compared desktop vs mobile layouts using screenshots
 
 ## Day -3 JavaScript ES6 and DOM Manipulation
+
+- Created FAQ accordion using JavaScript
+- Used arrays and objects as data source
+- Dynamically rendered HTML elements using DOM manipulation
+- Implemented click-based interaction using event listeners
+- Applied ES6 features like `const`, arrow functions, destructuring, and `forEach`

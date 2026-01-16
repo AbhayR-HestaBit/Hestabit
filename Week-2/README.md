@@ -16,10 +16,16 @@ week2-frontend/
 │   └── README.md
 ├── day3/
 │   ├── index.html
-│   │   ├── index.html
-│   │   ├── style.css
-│   │   └── script.js
-│   └── README.md│
+│   ├── style.css
+│   ├── script.js
+│   ├── screenshots/
+│   └── README.md
+├── day4/
+│   ├── index.html
+│   ├── style.css
+│   ├── script.js
+│   ├── screenshots/
+│   └── README.md
 └── README.md
 ```
 ## Day-1 HTML 5 Semantic Layout
@@ -45,3 +51,5 @@ week2-frontend/
 - Dynamically rendered HTML elements using DOM manipulation
 - Implemented click-based interaction using event listeners
 - Applied ES6 features like `const`, arrow functions, destructuring, and `forEach`
+
+## Day-4 JS utilities and Local Storage

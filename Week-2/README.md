@@ -25,7 +25,10 @@ week2-frontend/
 │   ├── style.css
 │   ├── script.js
 │   ├── screenshots/
+│   ├── logs/
+│   ├── practice/
 │   └── README.md
+├── day5/
 └── README.md
 ```
 ## Day-1 HTML 5 Semantic Layout
@@ -53,3 +56,13 @@ week2-frontend/
 - Applied ES6 features like `const`, arrow functions, destructuring, and `forEach`
 
 ## Day-4 JS utilities and Local Storage
+
+- Debugging real runtime and syntax errors
+- Using browser DevTools (breakpoints, scope, watch)
+- Understanding rendering issues
+- Practicing performance patterns (debounce & throttle)
+- Implementing data transformation logic (groupBy)
+- Maintaining proper logs
+
+## Day-5 Capstone UI and JS project
+

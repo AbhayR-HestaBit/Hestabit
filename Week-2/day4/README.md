@@ -9,6 +9,7 @@
   |—script.js
   |—screenshots\
   |—logs\
+  |—practice\
   |—README.md
 ```
 ## Tasks Done:

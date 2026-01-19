@@ -7,7 +7,8 @@
   |—index.html
   |—style.css
   |—script.js
-  |—screenshots
+  |—screenshots\
+  |—logs\
   |—README.md
 ```
 ## Tasks Done:
@@ -21,17 +22,17 @@
 
 ### Todo App:
 
-[!TODO APP](screnshots/todo-1.png)
+![TODO APP](screenshots/todo-1.png)
 
 ### Debounce:
 
-[!debounc logs](screenshots/debounce.png)
-
+![Debounce logs](screenshots/debounce.png)
 
 ### Throttle:
 
-[!Throttle logs](screenshots/throttle.png)
+![Throttle logs](screenshots/throttle.png)
 
 ### Groupby:
 
-[!GroupBy logs](screenshots/Groupby.png)
+![GroupBy logs](screenshots/groupby.png)
+

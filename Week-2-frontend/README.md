@@ -1,4 +1,4 @@
-# WEEK-2
+# WEEK-2-Frontend
 
 ## Folder Structure:
 
@@ -29,6 +29,13 @@ week2-frontend/
 │   ├── practice/
 │   └── README.md
 ├── day5/
+│   ├── index.html
+│   ├── style.css
+│   ├── script.js
+│   ├── services/
+│   ├── utils/
+│   ├── screenshots/
+│   └── README.md
 └── README.md
 ```
 ## Day-1 HTML 5 Semantic Layout
@@ -66,3 +73,10 @@ week2-frontend/
 
 ## Day-5 Capstone UI and JS project
 
+- API data fetching
+- Progressive rendering
+- Skeleton loading
+- Filtering, searching, and sorting
+- Utility functions (debounce, throttle, groupBy)
+- Responsive UI
+- Debugging using browser DevTools

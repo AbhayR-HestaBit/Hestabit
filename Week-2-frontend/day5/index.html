@@ -1,24 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Day 5</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Ecommerce Website</title>
 <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
-<h1>Day 5 Project</h1>
-<main>
-
 <header>
-<h1>Product Dashboard</h1>
+<h2>PRODUCTS:</h2>
+
+<nav id="categories">
+<button data-category="all">All</button>
+<button data-category="beauty">Beauty</button>
+<button data-category="furniture">Furniture</button>
+<button data-category="fragrances">Fragrances</button>
+<button data-category="groceries">groceries</button>
+</nav>
+
+<div class="controls">
+<input id="search" type="text" placeholder="Search products">
+<button id="sort-high-low">Price: High → Low</button>
+<button id="sort-low-high">Price: Low → High</button>
+</div>
 </header>
 
-<section id="controls"></section>
-
-<section id="products"></section>
-
+<main>
+<ul id="product-list"></ul>
 </main>
 
-<script src="script.js"></script>
+<script type="module" src="script.js"></script>
 </body>
 </html>

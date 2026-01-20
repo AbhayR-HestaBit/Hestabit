@@ -1,12 +1,27 @@
 export default function Sidebar() {
   return (
-    <aside className="w-64 border-r h-screen p-4">
-      <nav className="space-y-2 text-sm">
-        <div className="font-medium">Menu</div>
-        <div className="text-gray-600">Dashboard</div>
-        <div className="text-gray-600">Users</div>
-        <div className="text-gray-600">Settings</div>
-      </nav>
+    <aside className="w-64 bg-slate-900 text-slate-200 h-full p-4 text-sm">
+      <div className="mb-6 text-xs uppercase text-slate-400">
+        Core
+      </div>
+
+      <ul className="space-y-2">
+        <li className="px-2 py-1 rounded bg-slate-800">
+          Dashboard
+        </li>
+        <li className="px-2 py-1 rounded hover:bg-slate-800 cursor-pointer">
+          Layouts
+        </li>
+        <li className="px-2 py-1 rounded hover:bg-slate-800 cursor-pointer">
+          Pages
+        </li>
+        <li className="px-2 py-1 rounded hover:bg-slate-800 cursor-pointer">
+          Charts
+        </li>
+        <li className="px-2 py-1 rounded hover:bg-slate-800 cursor-pointer">
+          Tables
+        </li>
+      </ul>
     </aside>
   );
 }

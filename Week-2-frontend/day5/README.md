@@ -44,7 +44,7 @@ after texts are loaded image will be fetched and displayed.
 
 ### Desktop-view of Ecommerce Website:
 
-![Desktop View](screenshots/desktop-view.pmg)
+![Desktop View](screenshots/desktop-view.png)
 
 ### Mobile-Responsive view:
 

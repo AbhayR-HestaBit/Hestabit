@@ -1,0 +1,23 @@
+body {
+font-family: sans-serif;
+}
+
+.card {
+border: 1px solid #ddd;
+padding: 12px;
+background: white;
+}
+
+.skeleton {
+background: #e5e7eb;
+height: 16px;
+margin-bottom: 8px;
+}
+
+.skeleton.image {
+height: 120px;
+}
+
+.skeleton.title {
+width: 80%
+}

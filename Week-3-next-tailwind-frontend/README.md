@@ -18,3 +18,9 @@ week3-next-tailwind-frontend/
 ## DAY-1 TALWINDCSS And UI System Basics
 
 ### Tasks Done:
+
+- created global layout with layout.js
+- implemented a Navigation Bar (Nav)
+- implemented a Side Navigation Bar (Sidebar)
+- used TailwindCSS classes for layout and spacing
+- dashboard UI skeleton

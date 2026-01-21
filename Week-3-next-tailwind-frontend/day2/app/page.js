@@ -1,34 +1,19 @@
-import Card from "../components/ui/Card";
-import Button from "../components/ui/Button";
-import Badge from "../components/ui/Badge";
+import StatCard from "../components/ui/StatCard";
 
 export default function Home() {
   return (
     <div className="space-y-6">
-      <h1 className="text-2xl font-semibold">
+      {/* Page Title */}
+      <h1 className="text-2xl font-semibold text-gray-900">
         Dashboard
       </h1>
 
-      {/* Cards grid */}
+      {/* Stat Cards */}
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
-        <Card title="Primary Card">
-          <Badge color="blue">Active</Badge>
-        </Card>
-
-        <Card title="Success Card">
-          <Badge color="green">Completed</Badge>
-        </Card>
-
-        <Card title="Warning Card">
-          <Badge color="red">Pending</Badge>
-        </Card>
-
-        <Card
-          title="Action Card"
-          footer={<Button>View Details</Button>}
-        >
-          Click below to see details
-        </Card>
+        <StatCard title="Primary Card" color="blue" />
+        <StatCard title="Warning Card" color="yellow" />
+        <StatCard title="Success Card" color="green" />
+        <StatCard title="Danger Card" color="red" />
       </div>
     </div>
   );

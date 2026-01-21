@@ -46,3 +46,12 @@ after that do copy the current files:
 ### Final Dashboard Layout:
 
 ![Final Nav-Side Bar](screenshots/final-nav-sidebar-1.png)
+
+### Start project:
+
+open the terminal with the path of root folder and use command:
+```bash
+npm run dev
+```
+
+after that open the given url in the output to see the live project

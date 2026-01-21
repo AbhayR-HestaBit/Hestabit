@@ -8,13 +8,13 @@
 │ ├── page.js 
 ├── components/
 │ └── ui/
-│ │ ├── Button.js
-│ │ ├── Badge.js
-│ │ ├── Card.js
-│ │ ├── Input.js
-│ │ ├── Modal.js
-│ │ ├── StatCard.js
-│ │ ├── PanelCard.js
+│ ├── Button.js
+│ ├── Badge.js
+│ ├── Card.js
+│ ├── Input.js
+│ ├── Modal.js
+│ ├── StatCard.js
+│ ├── PanelCard.js
 ├──README.md
 ├──UI-COMPONENTS-DOCS.md
 ```

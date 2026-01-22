@@ -26,6 +26,21 @@ week3-next-tailwind-frontend/
 │ │ │ ├── PanelCard.js
 │ ├──README.md
 │ ├──UI-COMPONENTS-DOCS.md
+│ ├─ Day-3/
+│ ├── app/
+│ │ ├── page.js
+│ │ ├── about/
+│ │ │ └── page.js 
+│ │ ├── dashboard/
+│ │ │ ├── layout.js
+│ │ │ ├── page.js 
+│ │ └── profile/
+│ │ │ └── page.js 
+│ ├── components/
+│ │ └── ui/
+│ │ │ └── Sidebar.js 
+│ ├── screenshots/
+│ ├──README.md
 ├── README.md
 
 ```
@@ -47,3 +62,10 @@ week3-next-tailwind-frontend/
 - Created reusable panels for charts and tables
 - Replicated dashboard UI from reference image
 - Maintained clean separation of layout and UI logic
+
+## Day-3 Next.js Routing And Layout System
+
+- Routing with App Router
+- Dashboard Restructuring
+- Nested Layouts
+- Sidebar Navigation

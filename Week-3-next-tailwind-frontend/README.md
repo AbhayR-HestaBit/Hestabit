@@ -41,6 +41,18 @@ week3-next-tailwind-frontend/
 │ │ │ └── Sidebar.js 
 │ ├── screenshots/
 │ ├──README.md
+│ ├─ Day-4/
+│ ├──app/
+│ │ ├── layout.js 
+│ │ ├── page.js
+│ ├── public/
+│ │ └── dashboard-preview.png 
+│ ├── components/
+│ │ └── ui/
+│ │ │ └── Sidebar.js
+│ │ │ └── Navbar.js
+│ ├── screenshots/
+│ ├──README.md
 ├── README.md
 
 ```
@@ -69,3 +81,10 @@ week3-next-tailwind-frontend/
 - Dashboard Restructuring
 - Nested Layouts
 - Sidebar Navigation
+
+## Day-4 Dynamic UI And Image Optimization
+
+- Responsive Layout System
+- Mobile Sidebar Navigation
+- Landing Page Improvements
+- Image Optimization

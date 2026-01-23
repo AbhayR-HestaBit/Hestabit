@@ -56,7 +56,7 @@ and after that do copy the current files:
 
 ![Feature section](screenshots/footer.png)
 
-## Layout in Different Layouts:
+## Layout in Different Devices:
 
 ![Feature section](screenshots/responsive.gif)
 

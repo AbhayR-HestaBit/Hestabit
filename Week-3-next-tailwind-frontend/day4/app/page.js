@@ -28,6 +28,16 @@ export default function HomePage() {
             </button>
           </div>
         </div>
+	//image-dashboard
+        <div className="relative w-full h-[300px] lg:h-[400px]">
+          <Image
+            src="/dashboard-preview.png"
+            alt="Dashboard preview"
+            fill
+            className="object-contain"
+            priority
+          />
+        </div>
      </section>
     </main>
   );

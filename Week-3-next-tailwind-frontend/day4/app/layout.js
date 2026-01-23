@@ -7,7 +7,6 @@ import "./globals.css";
 import Navbar from "@/components/ui/Navbar";
 import Sidebar from "@/components/ui/Sidebar";
 
-
 export default function RootLayout({ children }) {
   const [mobileSidebarOpen, setMobileSidebarOpen] = useState(false);
 
@@ -15,10 +14,9 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className="bg-slate-100">
         <div className="flex flex-col h-screen">
+          <Navbar onMenuClick={() => setMobileSidebarOpen(true)} />
 
-           <Navbar onMenuClick={() => setMobileSidebarOpen(true)} />
           <div className="flex flex-1 overflow-hidden">
-
             <div className="hidden md:block">
               <Sidebar />
             </div>
@@ -30,7 +28,9 @@ export default function RootLayout({ children }) {
 
           {mobileSidebarOpen && (
             <div className="fixed inset-0 z-50 md:hidden">
-              <div
+              <button
+                type="button"
+                aria-label="Close sidebar overlay"
                 className="absolute inset-0 bg-black/40"
                 onClick={() => setMobileSidebarOpen(false)}
               />

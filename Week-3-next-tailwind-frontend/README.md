@@ -26,7 +26,7 @@ week3-next-tailwind-frontend/
 │ │ │ ├── PanelCard.js
 │ ├──README.md
 │ ├──UI-COMPONENTS-DOCS.md
-│ ├─ Day-3/
+├─ Day-3/
 │ ├── app/
 │ │ ├── page.js
 │ │ ├── about/
@@ -41,7 +41,7 @@ week3-next-tailwind-frontend/
 │ │ │ └── Sidebar.js 
 │ ├── screenshots/
 │ ├──README.md
-│ ├─ Day-4/
+├─ Day-4/
 │ ├──app/
 │ │ ├── layout.js 
 │ │ ├── page.js
@@ -51,6 +51,19 @@ week3-next-tailwind-frontend/
 │ │ └── ui/
 │ │ │ └── Sidebar.js
 │ │ │ └── Navbar.js
+│ ├── screenshots/
+│ ├──README.md
+├─ Day-5/
+│ ├──app/
+│ │ ├──dashboard/ 
+│ │ │ ├── users
+│ │ │ │ └──  page.js
+│ │ │ ├── profile
+│ │ │ │ └──  page.js
+│ │ ├── login
+│ │ │ └──  page.js
+│ ├── public/
+│ │ └── profile.png 
 │ ├── screenshots/
 │ ├──README.md
 ├── README.md
@@ -77,6 +90,8 @@ week3-next-tailwind-frontend/
 
 ## Day-3 Next.js Routing And Layout System
 
+### Tasks Done:
+
 - Routing with App Router
 - Dashboard Restructuring
 - Nested Layouts
@@ -84,7 +99,47 @@ week3-next-tailwind-frontend/
 
 ## Day-4 Dynamic UI And Image Optimization
 
+### Tasks Done:
+
 - Responsive Layout System
 - Mobile Sidebar Navigation
 - Landing Page Improvements
 - Image Optimization
+
+## Day-5 Capstone Mini Project: 
+
+### Tasks Done:
+
+- Created a dedicated profile page layout
+- Login Page with email and password
+- created a Users list
+- Used dashboard components
+- and made every component device responsive
+
+## Learnings:
+
+- Component-based UI architecture
+- File based routing
+- TailwindCSS installation and usage
+- SEO optimization with meatadata
+- Image optimization with link
+
+## Components Used 
+
+- Navbar (for top-level navigation )
+- Sidebar(navigation menu)
+- Card(Generic container)
+- StatCard(To Display key statistics)
+- PanelCard(Display content in panel format)
+- Button(Reusable component for submission)
+- Badge (Displays status)
+- Login Page (authentication-related UI)
+- Profile Page (Displays user profile)
+
+### Dashboard Layout:
+
+![Dashboard-Login-Userlist](screenshots/initial-dashboard.gif)
+
+### About Page:
+![About-Profile](screenshots/about-dashboard.gif)
+

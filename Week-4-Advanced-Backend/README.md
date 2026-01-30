@@ -33,3 +33,11 @@ src/
 - Implemented password hashing using pre-save hook
 - Built repository layer to abstract database operations
 - Verified implementation using MongoDB and Node execution
+
+### Day 3 - Database Modeling, Indexing and Advanced CRUD
+
+- Created User and Product database schemas
+- Added data validation and constraints
+- Implemented password hashing using pre-save hook
+- Built repository layer to abstract database operations
+- Verified implementation using MongoDB and Node execution

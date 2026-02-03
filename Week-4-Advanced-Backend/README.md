@@ -52,4 +52,11 @@ src/
 - Verified payload size and field validation using curl
 - Tested rate limit and CORS behavior via headers
 
+### Day 5 - JOB QUEUES, LOGGING, API DOCUMENTATION AND CAPSTONE 
 
+- Background job integration using BullMQ
+- Worker process setup and logging
+- Logs correlated with request ID
+- API documentation via Postman Collection
+- Production-ready setup using PM2
+- Ecosystem configuration for deployment

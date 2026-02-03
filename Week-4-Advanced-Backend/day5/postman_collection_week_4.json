@@ -1,0 +1,109 @@
+{
+	"info": {
+		"_postman_id": "c52933b7-b90d-4d94-abf0-ae667e85a0e5",
+		"name": "Week-4-Backend",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "51377374",
+		"_collection_link": "https://abhayr-hestabit-5216423.postman.co/workspace/Abhay-Rajput's-Workspace~2f15b2e7-c146-4cde-8cdd-ba5be486d513/collection/51377374-c52933b7-b90d-4d94-abf0-ae667e85a0e5?action=share&source=collection_link&creator=51377374"
+	},
+	"item": [
+		{
+			"name": "Get prod",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{baseURL}}/products",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create prod",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"name\": \"Demo Product\",\n  \"price\": 500\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/products",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update prod",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"price\": 750\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{baseURL}}/products/{{productId}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"products",
+						"{{productId}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Validation fail",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"price\": -27\n}"
+				},
+				"url": {
+					"raw": "{{baseURL}}/products/{{productId}}",
+					"host": [
+						"{{baseURL}}"
+					],
+					"path": [
+						"products",
+						"{{productId}}"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

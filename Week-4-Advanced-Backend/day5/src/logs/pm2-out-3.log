@@ -1,0 +1,196 @@
+2026-02-03 15:49:15: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
+2026-02-03 15:49:16: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  suppress all logs with { quiet: true }
+2026-02-03 15:49:18: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2026-02-03 15:49:19: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+2026-02-03 15:49:20: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  override existing env vars with { override: true }
+2026-02-03 15:49:22: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+2026-02-03 15:49:23: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2026-02-03 15:49:25: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2026-02-03 15:49:27: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+2026-02-03 15:49:28: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+2026-02-03 15:49:30: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+2026-02-03 15:49:31: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+2026-02-03 15:49:32: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
+2026-02-03 15:49:33: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+2026-02-03 15:49:35: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 📡 add observability to secrets: https://dotenvx.com/ops
+2026-02-03 15:49:36: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  suppress all logs with { quiet: true }
+2026-02-03 15:49:38: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2026-02-03 15:49:39: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+2026-02-03 15:49:40: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  enable debug logging with { debug: true }
+2026-02-03 15:49:41: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  override existing env vars with { override: true }
+2026-02-03 15:49:43: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+2026-02-03 15:49:44: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+2026-02-03 15:49:45: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+2026-02-03 15:49:47: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2026-02-03 15:49:48: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+2026-02-03 15:49:49: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  suppress all logs with { quiet: true }
+2026-02-03 15:49:51: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2026-02-03 15:49:53: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  enable debug logging with { debug: true }
+2026-02-03 15:49:54: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2026-02-03 15:49:55: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+2026-02-03 15:49:57: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
+2026-02-03 15:49:59: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+2026-02-03 15:50:00: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  override existing env vars with { override: true }
+2026-02-03 15:50:02: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+2026-02-03 15:50:03: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  enable debug logging with { debug: true }
+2026-02-03 15:50:04: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+2026-02-03 15:50:06: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+2026-02-03 15:50:07: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  suppress all logs with { quiet: true }
+2026-02-03 15:50:08: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 📡 add observability to secrets: https://dotenvx.com/ops
+2026-02-03 15:50:10: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+2026-02-03 15:50:11: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  suppress all logs with { quiet: true }
+2026-02-03 15:50:12: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 📡 add observability to secrets: https://dotenvx.com/ops
+2026-02-03 15:50:14: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  enable debug logging with { debug: true }
+2026-02-03 15:50:15: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2026-02-03 15:50:17: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2026-02-03 15:50:18: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  enable debug logging with { debug: true }
+2026-02-03 15:50:20: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2026-02-03 15:50:21: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  override existing env vars with { override: true }
+2026-02-03 15:50:22: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
+2026-02-03 15:50:24: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+2026-02-03 15:50:25: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  suppress all logs with { quiet: true }
+2026-02-03 15:50:26: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+2026-02-03 15:50:27: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
+2026-02-03 15:50:29: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
+2026-02-03 15:50:30: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2026-02-03 15:50:31: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+2026-02-03 15:50:33: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+2026-02-03 15:50:34: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+2026-02-03 15:50:35: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+2026-02-03 15:50:37: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 📡 add observability to secrets: https://dotenvx.com/ops
+2026-02-03 15:50:38: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2026-02-03 15:50:39: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2026-02-03 15:50:41: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2026-02-03 15:50:42: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  suppress all logs with { quiet: true }
+2026-02-03 15:50:44: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+2026-02-03 15:50:45: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2026-02-03 15:50:47: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2026-02-03 15:50:48: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+2026-02-03 15:50:50: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  override existing env vars with { override: true }
+2026-02-03 15:50:52: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+2026-02-03 15:50:53: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+2026-02-03 15:50:54: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  override existing env vars with { override: true }
+2026-02-03 15:50:56: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  suppress all logs with { quiet: true }
+2026-02-03 15:50:57: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  suppress all logs with { quiet: true }
+2026-02-03 15:50:59: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  suppress all logs with { quiet: true }
+2026-02-03 15:51:00: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+2026-02-03 15:51:01: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  enable debug logging with { debug: true }
+2026-02-03 15:51:02: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
+2026-02-03 15:51:03: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+2026-02-03 15:51:05: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  suppress all logs with { quiet: true }
+2026-02-03 15:51:06: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  suppress all logs with { quiet: true }
+2026-02-03 15:51:07: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+2026-02-03 15:51:08: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 📡 add observability to secrets: https://dotenvx.com/ops
+2026-02-03 15:51:09: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
+2026-02-03 15:51:11: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+2026-02-03 15:51:12: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  override existing env vars with { override: true }
+2026-02-03 15:51:14: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2026-02-03 15:51:15: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  override existing env vars with { override: true }
+2026-02-03 15:51:16: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+2026-02-03 15:51:17: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  suppress all logs with { quiet: true }
+2026-02-03 15:51:19: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  enable debug logging with { debug: true }
+2026-02-03 15:51:20: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  override existing env vars with { override: true }
+2026-02-03 15:51:22: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  override existing env vars with { override: true }
+2026-02-03 15:51:23: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+2026-02-03 15:51:24: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2026-02-03 15:51:25: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  enable debug logging with { debug: true }
+2026-02-03 15:51:27: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+2026-02-03 15:51:28: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2026-02-03 15:51:30: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
+2026-02-03 15:51:31: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 📡 add observability to secrets: https://dotenvx.com/ops
+2026-02-03 15:51:32: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+2026-02-03 15:51:34: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
+2026-02-03 15:51:35: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+2026-02-03 15:51:37: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+2026-02-03 15:51:38: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  suppress all logs with { quiet: true }
+2026-02-03 15:51:39: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+2026-02-03 15:51:41: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+2026-02-03 15:51:42: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 📡 add observability to secrets: https://dotenvx.com/ops
+2026-02-03 15:51:43: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2026-02-03 15:51:45: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+2026-02-03 15:51:46: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
+2026-02-03 15:51:48: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+2026-02-03 15:51:49: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+2026-02-03 15:51:50: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+2026-02-03 15:51:52: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
+2026-02-03 15:51:54: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
+2026-02-03 15:51:55: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+2026-02-03 15:51:56: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
+2026-02-03 15:51:57: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+2026-02-03 15:51:59: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  enable debug logging with { debug: true }
+2026-02-03 15:52:01: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+2026-02-03 15:52:02: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2026-02-03 15:52:03: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  suppress all logs with { quiet: true }
+2026-02-03 15:52:05: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 📡 add observability to secrets: https://dotenvx.com/ops
+2026-02-03 15:52:06: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+2026-02-03 15:52:07: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  suppress all logs with { quiet: true }
+2026-02-03 15:52:08: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+2026-02-03 15:52:10: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+2026-02-03 15:52:11: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+2026-02-03 15:52:13: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  override existing env vars with { override: true }
+2026-02-03 15:52:14: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+2026-02-03 15:52:16: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  enable debug logging with { debug: true }
+2026-02-03 15:52:17: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2026-02-03 15:52:18: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2026-02-03 15:52:20: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  override existing env vars with { override: true }
+2026-02-03 15:52:21: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  enable debug logging with { debug: true }
+2026-02-03 15:52:22: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+2026-02-03 15:52:23: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2026-02-03 15:52:25: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  suppress all logs with { quiet: true }
+2026-02-03 15:52:26: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+2026-02-03 15:52:27: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
+2026-02-03 15:52:28: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+2026-02-03 15:52:30: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+2026-02-03 15:52:31: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
+2026-02-03 15:52:32: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔑 add access controls to secrets: https://dotenvx.com/ops
+2026-02-03 15:52:34: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+2026-02-03 15:52:35: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2026-02-03 15:52:37: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+2026-02-03 15:52:38: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2026-02-03 15:52:39: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+2026-02-03 15:52:41: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  override existing env vars with { override: true }
+2026-02-03 15:52:42: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
+2026-02-03 15:52:43: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+2026-02-03 15:52:45: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 prevent building .env in docker: https://dotenvx.com/prebuild
+2026-02-03 15:52:47: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+2026-02-03 15:52:48: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
+2026-02-03 15:52:49: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+2026-02-03 15:52:50: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  suppress all logs with { quiet: true }
+2026-02-03 15:52:52: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+2026-02-03 15:52:53: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+2026-02-03 15:52:54: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  enable debug logging with { debug: true }
+2026-02-03 15:52:56: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ✅ audit secrets and track compliance: https://dotenvx.com/ops
+2026-02-03 15:52:57: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+2026-02-03 15:52:59: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+2026-02-03 15:53:00: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
+2026-02-03 15:53:01: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+2026-02-03 15:53:03: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2026-02-03 15:53:04: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
+2026-02-03 15:53:05: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 prevent committing .env to code: https://dotenvx.com/precommit
+2026-02-03 15:53:07: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+2026-02-03 15:53:08: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  write to custom object with { processEnv: myObject }
+2026-02-03 15:53:09: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
+2026-02-03 15:53:11: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2026-02-03 15:53:12: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2026-02-03 15:53:14: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔄 add secrets lifecycle management: https://dotenvx.com/ops
+2026-02-03 15:53:15: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2026-02-03 15:53:16: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  enable debug logging with { debug: true }
+2026-02-03 15:53:18: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+2026-02-03 15:53:19: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+2026-02-03 15:53:21: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🗂️ backup and recover secrets: https://dotenvx.com/ops
+2026-02-03 15:53:23: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2026-02-03 15:53:25: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  enable debug logging with { debug: true }
+2026-02-03 15:53:26: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 📡 add observability to secrets: https://dotenvx.com/ops
+2026-02-03 15:53:27: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+2026-02-03 15:53:29: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2026-02-03 15:53:30: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  enable debug logging with { debug: true }
+2026-02-03 15:53:32: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+2026-02-03 15:53:33: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+2026-02-03 15:53:35: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  load multiple .env files with { path: ['.env.local', '.env'] }
+2026-02-03 15:53:37: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+2026-02-03 15:53:38: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+2026-02-03 15:53:40: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  specify custom .env file path with { path: '/custom/path/.env' }
+2026-02-03 15:53:41: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🔐 encrypt with Dotenvx: https://dotenvx.com
+2026-02-03 15:53:43: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 👥 sync secrets across teammates & machines: https://dotenvx.com/ops
+2026-02-03 15:53:44: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: 🛠️  run anywhere with `dotenvx run -- yourcommand`
+2026-02-03 15:53:46: [dotenv@17.2.3] injecting env (0) from .env.prod -- tip: ⚙️  write to custom object with { processEnv: myObject }

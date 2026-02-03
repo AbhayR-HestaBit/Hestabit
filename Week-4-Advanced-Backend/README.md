@@ -41,3 +41,15 @@ src/
 - Implemented password hashing using pre-save hook
 - Built repository layer to abstract database operations
 - Verified implementation using MongoDB and Node execution
+
+### Day 4 - Security, validation, rate-limiting, and hardening
+
+- Added request validation using Joi
+- Implemented middlewares
+  - HTTP security headers (Helmet)
+  - CORS handling
+  - Rate limiting
+- Verified payload size and field validation using curl
+- Tested rate limit and CORS behavior via headers
+
+

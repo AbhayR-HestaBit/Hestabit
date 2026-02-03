@@ -13,7 +13,7 @@ day3
 │    │   ├── app.js
 │    │   └── db.js
 │    ├── middlewares
-│    │   └── product.service.js
+│    │   └── error-middleware.js
 │    ├── models
 │    │   ├── Product.js
 │    │   └── User.js

@@ -14,6 +14,7 @@ done
 ## CORS
 CORS policy is enforced to control cross-origin access, Where requests from unknown origins are handled via headers.
 
+Tested: 
 ```bash
 curl -i -H "Origin: http://evil.com" http://localhost:3000/products
 ```
@@ -22,6 +23,7 @@ curl -i -H "Origin: http://evil.com" http://localhost:3000/products
 ## Payload Size Limit
 Request body size is restricted to prevent large payload attacks where oversized requests are rejected.
 
+Tested: 
 ```bash
 perl -e 'print "{\"name\":\"".("A"x20000)."\"}"' \
 | curl -X POST http://localhost:3000/products \
@@ -33,6 +35,7 @@ perl -e 'print "{\"name\":\"".("A"x20000)."\"}"' \
 ## HTTP Security Headers
 Security headers are enabled using Helmet to harden the application.
 
+Tested: 
 ```bash
 curl -i http://localhost:3000/products
 ```

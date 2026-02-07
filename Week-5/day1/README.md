@@ -26,3 +26,29 @@
 docker build -t day1 .
 docker run -d -p 3000:3000 --name day1 day1
 ```
+
+- For Seeing all running containers
+```bash
+docker ps
+```
+
+- For Viewing Logs in realtime 
+```bash
+docker logs -f day1
+```
+
+- For entering in running container
+```bash
+docker exec -it day1 sh
+```
+
+- For Stopping Container
+```bash
+docker stop day1
+```
+
+![Docker Build](screenshots/build-1.png)
+
+![Commands Inside](screenshots/commad-1.png)
+
+![Commands-2](screenshots/command-2.png)

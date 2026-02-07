@@ -67,3 +67,7 @@ docker compose logs
 ```bash
 docker compose logs -f
 ``` 
+
+![Docker Compose](screenshots/compose.png)
+
+![Docker Processes](screenshots/docker-ps.png)

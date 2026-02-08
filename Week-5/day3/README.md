@@ -39,7 +39,7 @@ curl http://localhost:8080/api
 
 ![CURL](screenshots/curl.png)
 
-- For building container
+- For seeing logs
 ```bash
 docker logs day3-nginx-1
 ```

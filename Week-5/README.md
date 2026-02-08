@@ -37,6 +37,19 @@ Week-5/
 │ ├── Dockerfile
 │ ├── index.js
 │ └── package.json
+day4/
+│ ├── docker-compose.yml
+│ ├── ssl-setup.md
+│ ├── README.md
+│ ├── nginx/
+│ │ ├── nginx.conf
+│ └── certs/
+│ │ ├── server.crt
+│ │ └── server.key
+│ └── backend/
+│ │ ├── Dockerfile
+│ │ ├── index.js
+│ │ └── package.json
 
 ```
 
@@ -62,3 +75,11 @@ Week-5/
 - Scaled backend service to multiple instances
 - Implemented round-robin load balancing
 - Verified load balancing using container hostnames
+
+### Day 4 - SSL, Self-Signed, mkcert And HTTPS
+
+- Generated browser-trusted certificates using mkcert
+- Configured NGINX for HTTPS
+- Mounted SSL certificates into NGINX container
+- Verified secure access using curl and browser
+- Ran services using Docker Compose

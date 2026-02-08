@@ -27,6 +27,16 @@ Week-5/
 │ │ ├── package.json
 │ │ ├── public/
 │ │ └── src/
+├──day3/
+│ ├── docker-compose.yml
+│ ├── reverse-proxy-readme.md
+│ ├── README.md
+│ ├── nginx/
+│ │ └── nginx.conf
+│ └── backend/
+│ ├── Dockerfile
+│ ├── index.js
+│ └── package.json
 
 ```
 
@@ -45,4 +55,10 @@ Week-5/
 - Built a server and client service
 - Added MongoDB as a database container
 - Managed all services using a single `docker compose up -d` command
-    
+
+### Day 3 - NGINX Reverse Proxy And Load Balancing
+
+- Configured NGINX as a reverse proxy
+- Scaled backend service to multiple instances
+- Implemented round-robin load balancing
+- Verified load balancing using container hostnames

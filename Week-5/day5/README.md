@@ -23,7 +23,6 @@ day5/
 │       └── server.key
 │
 ├── docker-compose.yml
-├── .env
 └── README.md
 ```
 

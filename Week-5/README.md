@@ -50,6 +50,27 @@ day4/
 │ │ ├── Dockerfile
 │ │ ├── index.js
 │ │ └── package.json
+day5/
+│
+├── backend/
+│   ├── Dockerfile
+│   ├── index.js
+│   ├── package.json
+│   └── .dockerignore
+│
+├── client/
+│   ├── Dockerfile
+│   ├── index.html
+│   └── .dockerignore
+│
+├── nginx/
+│   ├── nginx.conf
+│   └── certs/
+│       ├── server.crt
+│       └── server.key
+│
+├── docker-compose.yml
+└── README.md
 
 ```
 
@@ -83,3 +104,10 @@ day4/
 - Mounted SSL certificates into NGINX container
 - Verified secure access using curl and browser
 - Ran services using Docker Compose
+
+### Day 5 - CI-Style Deployment Automation & Capstone
+
+- Multi Container Docker setup
+- Reverse Proxy Configuration
+- Https Setup
+- Health check config

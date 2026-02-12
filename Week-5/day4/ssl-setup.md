@@ -70,3 +70,4 @@ docker compose up -d
 ```bash 
 docker compose logs
 ```
+![Logs](screenshots/logs.png)

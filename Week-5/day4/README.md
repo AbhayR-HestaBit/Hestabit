@@ -48,6 +48,8 @@ docker compose up -d
 docker compose logs
 ```
 
+![Logs](screenshots/logs.png)
+
 ## Verification and testing
 
 - Over CLI

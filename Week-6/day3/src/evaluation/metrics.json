@@ -1,0 +1,67 @@
+{
+    "LogisticRegression": {
+        "CV_F1": 0.9387243737940258,
+        "Test_Accuracy": 0.7653333333333333,
+        "Test_Precision": 0.9150805270863837,
+        "Test_Recall": 0.9689922480620154,
+        "Test_F1": 0.9412650602409639,
+        "Test_ROC_AUC": 0.9007456626061277,
+        "recall_not_placed": 0.8761904761904762,
+        "recall_placed": 0.7472868217054264,
+        "precision_not_placed": 0.3607843137254902,
+        "f1_not_placed": 0.5111111111111111,
+        "optimal_threshold": 0.9000000000000002
+    },
+    "RandomForest": {
+        "CV_F1": 0.9348055190876046,
+        "Test_Accuracy": 0.892,
+        "Test_Precision": 0.9122807017543859,
+        "Test_Recall": 0.9674418604651163,
+        "Test_F1": 0.9390519187358917,
+        "Test_ROC_AUC": 0.895983757844223,
+        "recall_not_placed": 0.42857142857142855,
+        "recall_placed": 0.9674418604651163,
+        "precision_not_placed": 0.6818181818181818,
+        "f1_not_placed": 0.5263157894736842,
+        "optimal_threshold": 0.5
+    },
+    "XGBoost": {
+        "CV_F1": 0.9299332441301825,
+        "Test_Accuracy": 0.8906666666666667,
+        "Test_Precision": 0.9195230998509687,
+        "Test_Recall": 0.9565891472868217,
+        "Test_F1": 0.9376899696048632,
+        "Test_ROC_AUC": 0.8758656330749354,
+        "recall_not_placed": 0.4857142857142857,
+        "recall_placed": 0.9565891472868217,
+        "precision_not_placed": 0.6455696202531646,
+        "f1_not_placed": 0.5543478260869565,
+        "optimal_threshold": 0.5
+    },
+    "LightGBM": {
+        "CV_F1": 0.9313019272275576,
+        "Test_Accuracy": 0.8853333333333333,
+        "Test_Precision": 0.9153046062407132,
+        "Test_Recall": 0.9550387596899225,
+        "Test_F1": 0.9347496206373292,
+        "Test_ROC_AUC": 0.8842524916943522,
+        "recall_not_placed": 0.45714285714285713,
+        "recall_placed": 0.9550387596899225,
+        "precision_not_placed": 0.6233766233766234,
+        "f1_not_placed": 0.5274725274725275,
+        "optimal_threshold": 0.5
+    },
+    "NeuralNetwork": {
+        "CV_F1": 0.9359496101507118,
+        "Test_Accuracy": 0.8893333333333333,
+        "Test_Precision": 0.915680473372781,
+        "Test_Recall": 0.9596899224806201,
+        "Test_F1": 0.9371688115064345,
+        "Test_ROC_AUC": 0.889656699889258,
+        "recall_not_placed": 0.45714285714285713,
+        "recall_placed": 0.9596899224806201,
+        "precision_not_placed": 0.6486486486486487,
+        "f1_not_placed": 0.5363128491620112,
+        "optimal_threshold": 0.5
+    }
+}

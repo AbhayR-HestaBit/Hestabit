@@ -58,5 +58,10 @@ src/
 - Feature Selection
 - Correlation Filter For Removing redundant features.
 
+### Day 3: Model Building & Training
 
-
+- Training Pipeline to handle data loading, model definition, training, and evaluation in one go.
+- Trained 4 Models: Evaluated Logistic Regression (L2 Regularized), Random Forest, XGBoost, LightGBM And Neural Network.
+- 5-Fold Cross-Validation Implemented.
+- Evaluation Of Models.
+- Model Comparison.

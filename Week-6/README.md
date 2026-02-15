@@ -26,13 +26,11 @@ src/
 │   └── data_pipeline.py
 │
 ├── models/
-│   └── scaler.pkl
 │
 ├── utils/
 │   └── logger.py
 │
 ├── logs/
-│   └── data_pipeline_*.log
 │
 ├── features/
 ├── training/
@@ -53,4 +51,12 @@ src/
 - Train / Validation / Test Split
 - Feature Scaling
 - Logging System
+
+### Day 2: Feature Engineering & Selection
+
+- Built Processing Pipeline for Log Transformation, numeric Scaling, Categorical Encoding.
+- Feature Selection
+- Correlation Filter For Removing redundant features.
+
+
 

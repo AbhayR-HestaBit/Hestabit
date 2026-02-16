@@ -82,8 +82,5 @@ for col in numeric_cols:
 ![SHAP Summary](src/evaluation/shap_summary.png)
 Shows how high and low values of each feature influence the model's placement predictions.
 
-![SHAP Importance](src/evaluation/shap_importance.png)
-Shows the global importance of each feature according to SHAP values.
-
 ![Error Heatmap](src/evaluation/error_heatmap.png)
 Shows where the model struggles most.

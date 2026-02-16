@@ -65,3 +65,11 @@ src/
 - 5-Fold Cross-Validation Implemented.
 - Evaluation Of Models.
 - Model Comparison.
+
+### Day 4: Hyperparameter Tuning, Explainability AND Error Analysis
+
+- Hyperparameter tuning with Optuna.
+- SHAP analysis: generated summary plot and global importance bar chart.
+- Feature importance chart regenerated with proper feature name labels.
+- Error analysis: identified False Positives and False Negatives.
+- Bias/variance analysis: found which features differ most in error cases.

@@ -7,28 +7,16 @@ src/
 │
 ├── data/
 │   ├── raw/
-│   │   ├── indian_engineering_student_placement.csv
-│   │   └── placement_targets.csv
-│   │
 │   ├── processed/
-│   │   ├── final_<hash>.csv
-│   │   ├── train.csv
-│   │   ├── val.csv
-│   │   └── test.csv
-│   │
 │   └── external/
 │
 ├── notebooks/
-│   └── EDA.ipynb
 │
 ├── pipelines/
-│   ├── data_loader.py
-│   └── data_pipeline.py
 │
 ├── models/
 │
 ├── utils/
-│   └── logger.py
 │
 ├── logs/
 │
@@ -40,6 +28,13 @@ src/
 └── config/
 
 ```
+## Working
+
+Current Dataset is of indian_engineering_student_placement.csv, containing student stats and placement_targets.csv which contains placement status of subsequent students.
+
+The model build in this week focuses over prediction of those student who are at risk and need counseling for placements based on their current stats.
+
+
 ## Tasks Completed
 
 ### DAY-1 DATA PIPELINE, EDA AND PROJECT ARCHITECTURE
@@ -73,3 +68,9 @@ src/
 - Feature importance chart regenerated with proper feature name labels.
 - Error analysis: identified False Positives and False Negatives.
 - Bias/variance analysis: found which features differ most in error cases.
+
+### Day 5: Model Deployment And Monitoring
+
+- FastAPI `/predict` endpoint
+- Risk categorization: High Risk / Medium Risk / Low Risk.
+- Dockerfile for containerized deployment.

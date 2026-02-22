@@ -70,7 +70,7 @@ If you haven't downloaded the 4GB model yet, you can still test retrieval:
 3. **Embedding Generation:** `embedder.py` converts these blocks into numerical arrays using `BGE-small-en-v1.5`.
 4. **FAISS Indexing:** `vector_manager.py` loads the numerical arrays and indexes them for hyper-fast semantic search.
 
-## Minimal Code Snippet
+## Code Snippet
 **Text Chunking Configuration:**
 ```python
 # simple character splitting configured via model.yaml
@@ -78,7 +78,7 @@ chunk_size = 600
 chunk_overlap = 100
 ```
 
-## Commands for Day 1
+## Commands
 Make sure your API key is configured.
 ```bash
 # Activate virtual environment
@@ -92,6 +92,6 @@ python3 -m src.pipelines.run_pipeline --query "What is the primary document abou
 ```
 
 ## Screenshots
-[Add Screenshot of Ingest command execution here]
+![pipeline](screenshots/pipeline.png)
 
-[Add Screenshot of Query command execution here]
+![query](screenshots/query.png)

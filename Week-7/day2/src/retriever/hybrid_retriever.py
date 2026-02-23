@@ -11,9 +11,6 @@ from src.retriever.bm25_index import BM25Index
 logger = logging.getLogger(__name__)
 
 class HybridRetriever:
-    """
-    Combines semantic search and BM25 using Reciprocal Rank Fusion (RRF) for improved retrieval accuracy.
-    """
     def __init__(self, semantic_weight: float = 0.7, bm25_weight: float = 0.3):
         self.semantic_weight = semantic_weight
         self.bm25_weight = bm25_weight
@@ -36,7 +33,7 @@ class HybridRetriever:
             raise
 
     def retrieve(self, query: str, top_k: int = 5, filters: Optional[Dict[str, Any]] = None) -> List[Dict[str, Any]]:
-        """Performs hybrid retrieval using RRF fusion and optional filtering."""
+        
         try:
             # 1. semantic search
             query_vec = self.embedder.model.encode(query)
@@ -94,7 +91,6 @@ class HybridRetriever:
             return []
 
     def fallback_search(self, query: str, top_k: int = 5) -> List[Dict[str, Any]]:
-        """Simple substring search as a fallback when indexed results are insufficient."""
         query_lower = query.lower()
         results = []
         try:

@@ -8,9 +8,6 @@ from sklearn.metrics.pairwise import cosine_similarity
 logger = logging.getLogger(__name__)
 
 class Reranker:
-    """
-    Handles reranking of retrieved candidates using Cross-Encoders or Maximal Marginal Relevance (MMR).
-    """
     def __init__(self, model_name: str = 'cross-encoder/ms-marco-MiniLM-L-6-v2', device: str = 'cpu'):
         try:
             logger.info(f"Loading CrossEncoder model: {model_name} on {device}")
@@ -20,7 +17,6 @@ class Reranker:
             raise
 
     def rerank(self, query: str, candidates: List[Dict[str, Any]], batch_size: int = 16) -> List[Dict[str, Any]]:
-        """Reranks candidates using a cross-encoder model based on query relevance."""
         if not candidates:
             return []
         
@@ -42,11 +38,6 @@ class Reranker:
             return candidates  # Return original if reranking fails
 
     def rerank_with_mmr(self, query_emb: np.ndarray, candidates: List[Dict[str, Any]], lambda_: float = 0.5, top_k: int = 5) -> List[Dict[str, Any]]:
-        """
-        Maximal Marginal Relevance (MMR) to ensure diversity among top results.
-        query_emb: vector for the query
-        candidates: list of dicts with 'embedding' key (numpy array)
-        """
         if not candidates:
             return []
         

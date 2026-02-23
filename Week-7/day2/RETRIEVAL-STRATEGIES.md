@@ -45,7 +45,7 @@ If high-precision methods (Hybrid) fail to find enough results, the system falls
 ## Context Builder Integration
 The `ContextBuilder` aggregates everything. It takes the text fragments returned from `HybridRetriever`, sends them through `Reranker`, and then stitches them into a solid block of text separated by `--- Source ---` tags. The `QueryEngine` then wraps this completely processed context into a final prompt (using `rag_prompt.txt`) before injecting it into the LLM API.
 
-## Minimal Code Snippet
+## Code Snippet
 **Query Engine Retrieval without LLM:**
 ```python
 # retrieve raw context explicitly to see what the LLM will see
@@ -54,7 +54,7 @@ print(f"Chunks found: {res_dict['num_chunks']}\\n")
 print(res_dict['context'])
 ```
 
-## Commands for Day 2
+## Commands
 ```bash
 source week7_env/bin/activate
 # Test the Context Builder and Hybrid Retrieval without hitting the API
@@ -62,4 +62,4 @@ python3 -m src.retriever.query_engine --query "Explain the pricing models" --no_
 ```
 
 ## Screenshots
-[Add Screenshot of query_engine context inspection here]
+![Using LLM](screenshots/query.png)

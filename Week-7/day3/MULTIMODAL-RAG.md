@@ -57,7 +57,7 @@ To use OCR, you must have the Tesseract binary installed on your system:
 ## 7. How Retrieval Works
 Since CLIP was trained on text-image pairs, a text query like "red car" produces a vector that mathematically matches the vector generated from an actual picture of a red car. `image_search.py` simply maps your query to a vector and performs a fast similarity search in the FAISS index to find the closest matching image.
 
-## Minimal Code Snippet
+## Code Snippet
 **Generating Captions with BLIP:**
 ```python
 # simple caption generation for images
@@ -66,7 +66,7 @@ out = self.blip_model.generate(**inputs)
 caption = self.blip_processor.decode(out[0], skip_special_tokens=True)
 ```
 
-## Commands for Day 3
+## Commands 
 Make sure the API Key is set in your `.env`.
 
 ```bash
@@ -82,9 +82,9 @@ python3 -m src.retriever.image_search --mode img2ans --image src/data/images/raw
 ```
 
 ## Screenshots
-[Add Screenshot of Image Ingestion execution here]
+![Text to Image](screenshots/retriever.png)
 
-[Add Screenshot of Image-to-Answer command here]
+![Image to Answer](screenshots/img2ans.png)
 
 ## 6. CPU Performance & Troubleshooting
 - **CLIP Embedding:** ~2s per image.

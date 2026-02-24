@@ -1,0 +1,41 @@
+{
+    "session-123": [
+        {
+            "role": "user",
+            "content": "What is underwriting?",
+            "modality": "text"
+        },
+        {
+            "role": "assistant",
+            "content": "Underwriting is the process of evaluating risk...",
+            "faithfulness": 0.85,
+            "hallucination_flagged": false
+        }
+    ],
+    "session-456": [
+        {
+            "role": "user",
+            "content": "Total sales in 2023",
+            "modality": "text"
+        },
+        {
+            "role": "assistant",
+            "content": "The total sales were $5M.",
+            "faithfulness": 0.90,
+            "hallucination_flagged": false
+        }
+    ],
+    "session-789": [
+        {
+            "role": "user",
+            "content": "Explain this chart",
+            "modality": "image"
+        },
+        {
+            "role": "assistant",
+            "content": "This bar chart represents sales growth.",
+            "faithfulness": 1.0,
+            "hallucination_flagged": false
+        }
+    ]
+}

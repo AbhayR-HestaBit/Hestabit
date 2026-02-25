@@ -6,18 +6,28 @@ import argparse
 import json
 import random
 import statistics
+import logging
 from pathlib import Path
-from typing import Any
+from typing import Any, Dict, List, Optional, Tuple
+
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(levelname)s - %(message)s'
+)
+logger = logging.getLogger(__name__)
 
 try:
     from datasets import load_dataset
 except ImportError:
     load_dataset = None
+    logger.warning("datasets library not installed. HF reasoning will be unavailable.")
 
 try:
     from transformers import AutoTokenizer
 except ImportError:
     AutoTokenizer = None
+    logger.warning("transformers library not installed. Token length analysis will use split().")
 
 
 TARGETS = {
@@ -33,15 +43,24 @@ DEFAULT_REASONING_INSTRUCTION = (
 
 
 def read_json(path: Path) -> list[dict[str, Any]]:
-    with path.open("r", encoding="utf-8") as f:
-        return json.load(f)
+    """Reads a JSON file and returns the data."""
+    try:
+        with path.open("r", encoding="utf-8") as f:
+            return json.load(f)
+    except Exception as e:
+        logger.error(f"Failed to read JSON from {path}: {e}")
+        return []
 
 
 def save_jsonl(rows: list[dict[str, str]], path: Path) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    with path.open("w", encoding="utf-8") as f:
-        for row in rows:
-            f.write(json.dumps(row, ensure_ascii=False) + "\n")
+    """Saves a list of dictionaries to a JSONL file."""
+    try:
+        path.parent.mkdir(parents=True, exist_ok=True)
+        with path.open("w", encoding="utf-8") as f:
+            for row in rows:
+                f.write(json.dumps(row, ensure_ascii=False) + "\n")
+    except Exception as e:
+        logger.error(f"Failed to save JSONL to {path}: {e}")
 
 
 def dedupe_rows(rows: list[dict[str, str]]) -> list[dict[str, str]]:
@@ -352,9 +371,9 @@ def main() -> None:
     with (analysis_dir / "cleaning_summary.json").open("w", encoding="utf-8") as f:
         json.dump(summary, f, indent=2, ensure_ascii=False)
 
-    print(f"Saved train set to: {data_dir / 'train.jsonl'}")
-    print(f"Saved val set to: {data_dir / 'val.jsonl'}")
-    print(f"Saved cleaning summary to: {analysis_dir / 'cleaning_summary.json'}")
+    logger.info(f"Saved train set to: {data_dir / 'train.jsonl'}")
+    logger.info(f"Saved val set to: {data_dir / 'val.jsonl'}")
+    logger.info(f"Saved cleaning summary to: {analysis_dir / 'cleaning_summary.json'}")
 
 
 if __name__ == "__main__":

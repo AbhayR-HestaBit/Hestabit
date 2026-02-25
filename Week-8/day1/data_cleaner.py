@@ -43,7 +43,6 @@ DEFAULT_REASONING_INSTRUCTION = (
 
 
 def read_json(path: Path) -> list[dict[str, Any]]:
-    """Reads a JSON file and returns the data."""
     try:
         with path.open("r", encoding="utf-8") as f:
             return json.load(f)
@@ -53,7 +52,6 @@ def read_json(path: Path) -> list[dict[str, Any]]:
 
 
 def save_jsonl(rows: list[dict[str, str]], path: Path) -> None:
-    """Saves a list of dictionaries to a JSONL file."""
     try:
         path.parent.mkdir(parents=True, exist_ok=True)
         with path.open("w", encoding="utf-8") as f:

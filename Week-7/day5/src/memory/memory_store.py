@@ -1,8 +1,12 @@
 import json
+import logging
 from dataclasses import dataclass, asdict
 from datetime import datetime, timezone
 from pathlib import Path
-from typing import Dict, List, Optional
+from typing import Dict, List, Optional, Any
+
+# Configure logging
+logger = logging.getLogger(__name__)
 
 
 @dataclass
@@ -19,7 +23,10 @@ class ConversationMemory:
     def __init__(self, max_turns: int = 5, storage_dir: str = "src/logs/") -> None:
         self.max_turns = max_turns
         self.storage_dir = Path(storage_dir)
-        self.storage_dir.mkdir(parents=True, exist_ok=True)
+        try:
+            self.storage_dir.mkdir(parents=True, exist_ok=True)
+        except Exception as e:
+            logger.error(f"Failed to create memory storage directory: {e}")
         self._store: Dict[str, List[MemoryTurn]] = {}
 
     def _memory_path(self, session_id: str) -> Path:
@@ -28,11 +35,11 @@ class ConversationMemory:
     def _load_session(self, session_id: str) -> List[MemoryTurn]:
         if session_id in self._store:
             return self._store[session_id]
-
+    
         path = self._memory_path(session_id)
         if path.exists():
             try:
-                data = json.loads(path.read_text())
+                data = json.loads(path.read_text(encoding="utf-8"))
                 turns = [
                     MemoryTurn(
                         role=item.get("role", ""),
@@ -44,28 +51,30 @@ class ConversationMemory:
                     for item in data
                 ]
                 self._store[session_id] = turns
+                logger.info(f"Loaded session {session_id} from disk.")
                 return turns
-            except Exception:
-                # If file is corrupted, start fresh for this session
+            except Exception as e:
+                logger.error(f"Failed to load session {session_id}: {e}. Starting fresh.")
                 self._store[session_id] = []
                 return self._store[session_id]
-
+    
         self._store[session_id] = []
         return self._store[session_id]
-
+    
     def _persist_session(self, session_id: str) -> None:
-        turns = self._store.get(session_id, [])
-        path = self._memory_path(session_id)
-        serializable = [asdict(t) for t in turns]
-        path.write_text(json.dumps(serializable, ensure_ascii=False, indent=2))
+            turns = self._store.get(session_id, [])
+            path = self._memory_path(session_id)
+            serializable = [asdict(t) for t in turns]
+            path.write_text(json.dumps(serializable, ensure_ascii=False, indent=2), encoding="utf-8")
+        except Exception as e:
+            logger.error(f"Failed to persist session {session_id}: {e}")
 
     def add_turn(
-        # saves a new message (either user or ai) into the session history
         self,
         session_id: str,
         role: str,
         content: str,
-        sources: Optional[List[dict]] = None,
+        sources: Optional[List[Dict[str, Any]]] = None,
         modality: str = "text",
     ) -> None:
         turns = self._load_session(session_id)
@@ -124,9 +133,12 @@ class ConversationMemory:
 
     def list_sessions(self) -> List[str]:
         sessions = set(self._store.keys())
-        if self.storage_dir.exists():
-            for p in self.storage_dir.glob("memory_*.json"):
-                sid = p.stem.replace("memory_", "", 1)
-                sessions.add(sid)
+        try:
+            if self.storage_dir.exists():
+                for p in self.storage_dir.glob("memory_*.json"):
+                    sid = p.stem.replace("memory_", "", 1)
+                    sessions.add(sid)
+        except Exception as e:
+            logger.error(f"Error listing sessions: {e}")
         return sorted(sessions)
 

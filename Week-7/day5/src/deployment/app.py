@@ -23,8 +23,12 @@ from src.utils.tracer import RequestTracer
 from src.vectorstore.vector_manager import VectorStoreManager
 
 
+# Configure logging
+logging.basicConfig(
+    level=logging.INFO,
+    format='%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+)
 logger = logging.getLogger("week7_rag.api")
-logging.basicConfig(level=logging.INFO)
 
 
 class AskRequest(BaseModel):
@@ -170,107 +174,106 @@ async def upload_document(file: UploadFile = File(...)):
 
 
 @app.post("/ask")
-async def ask(req: AskRequest, request: Request):
-    # handle regular text questions using memory and vector search
+async def ask(req: AskRequest, request: Request) -> Dict[str, Any]:
     rid = getattr(request.state, "request_id", str(uuid.uuid4()))
-    tracer = getattr(app.state, "tracer", None)
-    if tracer is None:
-        tracer = RequestTracer()
-        app.state.tracer = tracer
+    try:
+        tracer = getattr(app.state, "tracer", RequestTracer())
+        memory = getattr(app.state, "memory", ConversationMemory())
+        reflector = getattr(app.state, "self_reflector", None)
+        evaluator = getattr(app.state, "rag_eval", RAGEvaluator())
+        builder = getattr(app.state, "context_builder", ContextBuilder())
+        llm = getattr(app.state, "llm_client", LocalLLMClient())
+    
+        if reflector is None:
+            reflector = SelfReflector(llm)
+    
+        tracer.log(rid, "received", req.model_dump())
+    
+        history_prefix = memory.format_history_for_prompt(req.session_id)
+        ctx_dict = builder.build(
+            req.query,
+            top_k=req.top_k,
+            filters=req.filters or None,
+            use_rerank=req.use_rerank,
+        )
         
-    memory = getattr(app.state, "memory", None)
-    if memory is None:
-        memory = ConversationMemory()
-        app.state.memory = memory
+        tracer.log(
+            rid,
+            "retrieval",
+            {
+                "num_chunks": ctx_dict.get("num_chunks", 0),
+                "sources": ctx_dict.get("sources", []),
+            },
+        )
+    
+        if not ctx_dict.get("context"):
+            logger.warning(f"No context found for query: {req.query}")
+            return {
+                "answer": "I'm sorry, I couldn't find any relevant information in the documents to answer that.",
+                "sources": [],
+                "session_id": req.session_id,
+                "query_id": rid
+            }
+    
+        context_for_llm = ctx_dict["context"]
+        if history_prefix:
+            context_for_llm = f"{history_prefix}\n\n{context_for_llm}"
+    
+        prompt = builder.format_prompt({"context": context_for_llm, "query": req.query})
         
-    reflector = getattr(app.state, "self_reflector", None)
-    if reflector is None:
-        reflector = SelfReflector(LocalLLMClient())
-        app.state.self_reflector = reflector
-        
-    evaluator = getattr(app.state, "rag_eval", None)
-    if evaluator is None:
-        evaluator = RAGEvaluator()
-        app.state.rag_eval = evaluator
-        
-    builder = getattr(app.state, "context_builder", None)
-    if builder is None:
-        builder = ContextBuilder()
-        app.state.context_builder = builder
-        
-    llm = getattr(app.state, "llm_client", None)
-    if llm is None:
-        llm = LocalLLMClient()
-        app.state.llm_client = llm
-
-    tracer.log(rid, "received", req.model_dump())
-
-    history_prefix = memory.format_history_for_prompt(req.session_id)
-    ctx_dict = builder.build(
-        req.query,
-        top_k=req.top_k,
-        filters=req.filters or None,
-        use_rerank=req.use_rerank,
-    )
-    tracer.log(
-        rid,
-        "retrieval",
-        {
-            "num_chunks": ctx_dict.get("num_chunks", 0),
+        try:
+            raw_answer = llm.generate(prompt)
+            tracer.log(rid, "llm_raw_answer", {"answer_preview": raw_answer[:200] if raw_answer else ""})
+            
+            refined_answer = reflector.refine_if_needed(req.query, raw_answer, context_for_llm)
+            tracer.log(rid, "refined_answer", {"answer_preview": refined_answer[:200]})
+        except Exception as llm_exc:
+            logger.error(f"LLM generation/refinement failed: {llm_exc}")
+            refined_answer = "An error occurred while generating the answer. Please try again."
+    
+        # Evaluation is best-effort
+        eval_result = {}
+        try:
+            eval_result = evaluator.evaluate_response(
+                req.query,
+                ctx_dict["context"],
+                refined_answer,
+                retrieval_scores=[],
+            )
+            tracer.log(rid, "evaluation", eval_result)
+        except Exception as eval_exc:
+            logger.error(f"Evaluation failed: {eval_exc}")
+    
+        # Update memory
+        memory.add_turn(
+            req.session_id,
+            role="user",
+            content=req.query,
+            sources=[],
+            modality="text",
+        )
+        memory.add_turn(
+            req.session_id,
+            role="assistant",
+            content=refined_answer,
+            sources=ctx_dict.get("sources", []),
+            modality="text",
+        )
+    
+        response = {
+            "answer": refined_answer,
             "sources": ctx_dict.get("sources", []),
-        },
-    )
-
-    if not ctx_dict["context"]:
-        raise HTTPException(status_code=404, detail="No context found for query")
-
-    context_for_llm = ctx_dict["context"]
-    if history_prefix:
-        context_for_llm = f"{history_prefix}\n\n{context_for_llm}"
-
-    prompt = builder.format_prompt({"context": context_for_llm, "query": req.query})
-    raw_answer = llm.generate(prompt)
-    tracer.log(rid, "llm_raw_answer", {"answer_preview": raw_answer[:200]})
-
-    refined_answer = reflector.refine_if_needed(req.query, raw_answer, context_for_llm)
-    tracer.log(
-        rid, "refined_answer", {"answer_preview": refined_answer[:200]}
-    )
-
-    eval_result = evaluator.evaluate_response(
-        req.query,
-        ctx_dict["context"],
-        refined_answer,
-        retrieval_scores=[],
-    )
-    tracer.log(rid, "evaluation", eval_result)
-
-    memory.add_turn(
-        req.session_id,
-        role="user",
-        content=req.query,
-        sources=[],
-        modality="text",
-    )
-    memory.add_turn(
-        req.session_id,
-        role="assistant",
-        content=refined_answer,
-        sources=ctx_dict.get("sources", []),
-        modality="text",
-    )
-
-    response = {
-        "answer": refined_answer,
-        "sources": ctx_dict.get("sources", []),
-        "session_id": req.session_id,
-        "query_id": rid,
-        "faithfulness": eval_result.get("faithfulness"),
-        "confidence": eval_result.get("confidence"),
-        "hallucination_flagged": eval_result.get("hallucination_flagged"),
-    }
-    tracer.log(rid, "response", response)
-    return response
+            "session_id": req.session_id,
+            "query_id": rid,
+            "faithfulness": eval_result.get("faithfulness"),
+            "confidence": eval_result.get("confidence"),
+            "hallucination_flagged": eval_result.get("hallucination_flagged"),
+        }
+        tracer.log(rid, "response", response)
+        return response
+    except Exception as e:
+        logger.error(f"Error in /ask: {e}", exc_info=True)
+        raise HTTPException(status_code=500, detail="Internal server error processing RAG query.")
 
 
 @app.post("/ask-image")

@@ -91,6 +91,6 @@ async def request_logging_middleware(request: Request, call_next):
 ```
 
 ## Screenshots
-[Add Screenshot of Postman hitting an endpoint here]
+![FastAPI logs](screenshots/BE.png)
 
-[Add Screenshot of Streamlit running successfully here]
+![FastAPI logs](screenshots/BE.png)

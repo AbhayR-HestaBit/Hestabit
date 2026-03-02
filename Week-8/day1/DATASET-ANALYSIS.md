@@ -1,5 +1,23 @@
 # Dataset Analysis Report
 
+## Workflow
+1. Data Sourcing: Collect raw medical datasets including QA pairs, extraction data, and reasoning chains.
+2. Preprocessing: Execute `utils/data_cleaner.py` to process the raw JSON files into a unified format.
+3. Data Refinement: Apply automated cleaning, deduplication, and outlier removal using the Interquartile Range (IQR) method on token lengths.
+4. Dataset Generation: Split the refined data into primary training (`train.jsonl`) and validation (`val.jsonl`) subsets.
+
+## Flow Diagram
+```text
+Raw Data (.json) --> utils/data_cleaner.py
+                        |
+                 Data Cleaning Logic
+                /                  \
+        Deduplication        Outlier Removal (IQR)
+                \                  /
+                 \--> Processed Data --+--> train.jsonl
+                                       |
+                                       +--> val.jsonl
+```
 ## Files Involved
 - `data/train.jsonl`: Primary training dataset (1500 samples).
 - `data/val.jsonl`: Validation dataset (600 samples).
@@ -30,3 +48,6 @@ def remove_length_outliers(rows, tokenizer):
     return [r for r, l in zip(rows, lengths) if lower <= l <= upper]
 ```
 
+## Screenshots
+![Data Cleaning Process](screenshots/cleaner.png)
+![Token Length Analysis](screenshots/token.png)

@@ -7,6 +7,14 @@ For checking for models kindly go to this link: https://drive.google.com/drive/f
 - `quantized/model-int8/`: HF-quantized 8-bit model.
 - `quantized/model-int4/`: HF-quantized 4-bit model.
 
+## Model Comparision
+
+| Format | Format Path | Size (MB) | Size (GB) | Production Status |
+| :--- | :--- | :--- | :--- | :--- |
+| **INT8** | `quantized/model-int8` | 1179.19 | 1.1515 | Generated |
+| **INT4** | `quantized/model-int4` | 730.59 | 0.7135 | Generated |
+| **GGUF (q4_0)** | `quantized/model.gguf` | 607.23 | 0.5930 | Generated |
+
 ## Commands Run
 To convert the merged FP16 model to GGUF format for llama.cpp:
 ```bash

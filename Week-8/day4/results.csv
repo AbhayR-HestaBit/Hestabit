@@ -1,0 +1,65 @@
+timestamp,model_label,model_kind,prompt_id,mode,latency_sec,generated_tokens,tokens_per_sec,vram_mb,accuracy,prompt_preview,output_text
+2026-03-19 19:32:31,base_model,base,qa_1,single,1.9953,10,5.0117,,1.0,"What is the likely diagnosis in a patient with fever, productive cough, and lobar consolidation on chest X-ray?","Lung infection, pneumonia."
+2026-03-19 19:32:46,base_model,base,reasoning_1,single,14.9329,96,6.4288,,0.0,A patient has unilateral leg swelling after a long flight and suddenly develops neurological deficits. What cardiac find,"The cardiac finding that may explain this is a left ventricular hypertrophy (LVH). LVH is a condition where the left ventricle of the heart becomes enlarged, which can lead to increased pressure within the heart and reduced blood flow to the body. This can result in symptoms such as shortness of breath, fatigue, and weakness. In this case, the patient's symptoms suggest that the LVH"
+2026-03-19 19:32:58,base_model,base,extraction_1,single,11.5305,74,6.4178,,0.4,"Patient John Doe, age 56, has diabetes mellitus and hypertension and was prescribed metformin 500 mg.","Key entities: Patient, age, diabetes, hypertension, metformin, prescribed.
+
+### Explanation:
+The key entities are: Patient, age, diabetes, hypertension, metformin, prescribed. These entities are extracted from the text and are used to create a new document."
+2026-03-19 19:33:02,base_model,base,qa_1,streaming,4.1633,3,0.7206,,1.0,"What is the likely diagnosis in a patient with fever, productive cough, and lobar consolidation on chest X-ray?","Lung infection, pneumonia."
+2026-03-19 19:33:23,base_model,base,qa_1,batch,7.1908,32,4.7282,,0.0,"What is the likely diagnosis in a patient with fever, productive cough, and lobar consolidation on chest X-ray?","The patient'sy
+
+The patient'sy
+fever
+The patient's fever
+
+The patient's fever
+fever
+fever
+fever
+fever
+fever
+fever
+fever
+fever
+fever
+fever
+fever
+fever
+fever
+fever
+fever
+fever
+fever
+fever
+fever
+fever
+fever"
+2026-03-19 19:33:23,base_model,base,reasoning_1,batch,7.1908,35,4.7282,,0.0,A patient has unilateral leg swelling after a long flight and suddenly develops neurological deficits. What cardiac find,"The patient'systolysis is a) Cardiac arrest
+The patient'systolysis ischemic cardiac arrest.
+
+###
+
+The patient'systolysis is a)
+The patient'systolysis is a) Cardiac arrest
+The patient'systolic cardiac dysrhythmia is a possible cause of the patient'systolic cardiac arrest."
+2026-03-19 19:33:23,base_model,base,extraction_1,batch,7.1908,35,4.7282,,0.4,"Patient John Doe, age 56, has diabetes mellitus and hypertension and was prescribed metformin 500 mg.","Key entities: Patient, age, diabetes, hypertension, metformin, prescribed.
+
+### Explanation:
+The key entities are: Patient, age, diabetes, hypertension, metformin, prescribed. These entities are extracted from the text and are used to create a new document."
+2026-03-19 19:33:34,fine_tuned_model,fine_tuned,qa_1,single,6.6578,35,5.257,,0.0,"What is the likely diagnosis in a patient with fever, productive cough, and lobar consolidation on chest X-ray?","The likely diagnosis in a patient with fever, productive cough, and lobar consolidation on chest X-ray is tuberculosis."
+2026-03-19 19:33:38,fine_tuned_model,fine_tuned,reasoning_1,single,3.9044,17,4.3541,,0.0,A patient has unilateral leg swelling after a long flight and suddenly develops neurological deficits. What cardiac find,The cardiac finding that may explain this is a cardiac tamponade.
+2026-03-19 19:33:43,fine_tuned_model,fine_tuned,extraction_1,single,4.7822,24,5.0186,,0.6,"Patient John Doe, age 56, has diabetes mellitus and hypertension and was prescribed metformin 500 mg.","John Doe, age 56, is prescribed 500 mg of metformin."
+2026-03-19 19:33:52,fine_tuned_model,fine_tuned,qa_1,streaming,9.2879,18,1.938,,0.0,"What is the likely diagnosis in a patient with fever, productive cough, and lobar consolidation on chest X-ray?","The likely diagnosis in a patient with fever, productive cough, and lobar consolidation on chest X-ray is tuberculosis."
+2026-03-19 19:34:16,fine_tuned_model,fine_tuned,qa_1,batch,7.9529,21,2.8082,,1.0,"What is the likely diagnosis in a patient with fever, productive cough, and lobar consolidation on chest X-ray?","`|system|adultraisedemaciation
+
+The most common cause of pneumonia, and most common cause of pneumonia?
+The most common cause of pneumonia is pneumonia."
+2026-03-19 19:34:16,fine_tuned_model,fine_tuned,reasoning_1,batch,7.9529,36,2.8082,,0.0,A patient has unilateral leg swelling after a long flight and suddenly develops neurological deficits. What cardiac find,The cardiacogenication is a condition that is characterized by a cardiacogenic ischemication ischemic ischemic ischemic ischemic ischemic ischemic ischemic ischemic ischemic ischemic ischemic ischemic ischemic ischemic ischemic ischemic ischemic ischemic ischemic ischemic ischemic ischemic ischemic ischem
+2026-03-19 19:34:16,fine_tuned_model,fine_tuned,extraction_1,batch,7.9529,10,2.8082,,0.6,"Patient John Doe, age 56, has diabetes mellitus and hypertension and was prescribed metformin 500 mg.","John Doe, age 56, is prescribed 500 mg of metformin."
+2026-03-19 19:34:19,quantized_gguf_model,gguf,qa_1,single,2.1337,32,14.9974,,0.0,"What is the likely diagnosis in a patient with fever, productive cough, and lobar consolidation on chest X-ray?","The likely diagnosis in a patient with fever, productive cough, and lobar consolidation on X-ray is tuberculosis."
+2026-03-19 19:34:23,quantized_gguf_model,gguf,reasoning_1,single,3.4025,19,5.5841,,0.0,A patient has unilateral leg swelling after a long flight and suddenly develops neurological deficits. What cardiac find,The patient's neurological deficiits are most likely due to a cardiac finding.
+2026-03-19 19:34:24,quantized_gguf_model,gguf,extraction_1,single,1.875,21,11.2002,,0.6,"Patient John Doe, age 56, has diabetes mellitus and hypertension and was prescribed metformin 500 mg.","The key entities are diabetes mellitus, hypertension, and metformin."
+2026-03-19 19:34:26,quantized_gguf_model,gguf,qa_1,streaming,1.459,17,11.652,,0.0,"What is the likely diagnosis in a patient with fever, productive cough, and lobar consolidation on chest X-ray?","The likely diagnosis in a patient with fever, productive cough, and lobar consolidation on X-ray is tuberculosis."
+2026-03-19 19:34:31,quantized_gguf_model,gguf,qa_1,batch,1.6047,17,7.8936,,0.0,"What is the likely diagnosis in a patient with fever, productive cough, and lobar consolidation on chest X-ray?","The likely diagnosis in a patient with fever, productive cough, and lobar consolidation on X-ray is tuberculosis."
+2026-03-19 19:34:31,quantized_gguf_model,gguf,reasoning_1,batch,1.6047,12,7.8936,,0.0,A patient has unilateral leg swelling after a long flight and suddenly develops neurological deficits. What cardiac find,The patient's neurological deficiits are most likely due to a cardiac finding.
+2026-03-19 19:34:31,quantized_gguf_model,gguf,extraction_1,batch,1.6047,9,7.8936,,0.6,"Patient John Doe, age 56, has diabetes mellitus and hypertension and was prescribed metformin 500 mg.","The key entities are diabetes mellitus, hypertension, and metformin."

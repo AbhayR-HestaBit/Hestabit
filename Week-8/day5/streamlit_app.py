@@ -20,7 +20,8 @@ def load_session_ids() -> list[str]:
         try:
             data = json.loads(SESSIONS_FILE.read_text(encoding="utf-8"))
             return sorted(list(data.keys()))
-        except Exception:
+        except Exception as e:
+            st.warning(f"Could not load session IDs: {e}")
             return []
     return []
 
@@ -38,46 +39,64 @@ with st.sidebar:
 if mode == "generate":
     prompt = st.text_area("Prompt", height=220, placeholder="Enter your prompt here...")
     if st.button("Generate", type="primary"):
-        with st.spinner("Generating..."):
-            resp = requests.post(
-                f"{API_URL}/generate",
-                json={
-                    "prompt": prompt,
-                    "temperature": temperature,
-                    "top_p": top_p,
-                    "top_k": top_k,
-                    "max_tokens": max_tokens,
-                },
-                timeout=300,
-            )
-            resp.raise_for_status()
-            data = resp.json()
-            st.subheader("Response")
-            st.write(data.get("text", ""))
-            st.json(data)
+        if not prompt.strip():
+            st.error("Please enter a prompt.")
+        else:
+            with st.spinner("Generating..."):
+                try:
+                    resp = requests.post(
+                        f"{API_URL}/generate",
+                        json={
+                            "prompt": prompt,
+                            "temperature": temperature,
+                            "top_p": top_p,
+                            "top_k": top_k,
+                            "max_tokens": max_tokens,
+                        },
+                        timeout=300,
+                    )
+                    resp.raise_for_status()
+                    data = resp.json()
+                    st.subheader("Response")
+                    st.write(data.get("text", ""))
+                    with st.expander("Raw API Metadata"):
+                        st.json(data)
+                except requests.exceptions.ConnectionError:
+                    st.error(f"Failed to connect to API at {API_URL}. Is the server running?")
+                except Exception as e:
+                    st.error(f"An error occurred: {e}")
 
 else:
     message = st.text_area("Message", height=160, placeholder="Type your chat message...")
     if st.button("Send", type="primary"):
-        with st.spinner("Replying..."):
-            resp = requests.post(
-                f"{API_URL}/chat",
-                json={
-                    "session_id": session_id,
-                    "system_prompt": system_prompt,
-                    "message": message,
-                    "temperature": temperature,
-                    "top_p": top_p,
-                    "top_k": top_k,
-                    "max_tokens": max_tokens,
-                },
-                timeout=300,
-            )
-            resp.raise_for_status()
-            data = resp.json()
-            st.subheader("Assistant")
-            st.write(data.get("text", ""))
-            st.json(data)
+        if not message.strip():
+            st.error("Please enter a message.")
+        else:
+            with st.spinner("Replying..."):
+                try:
+                    resp = requests.post(
+                        f"{API_URL}/chat",
+                        json={
+                            "session_id": session_id,
+                            "system_prompt": system_prompt,
+                            "message": message,
+                            "temperature": temperature,
+                            "top_p": top_p,
+                            "top_k": top_k,
+                            "max_tokens": max_tokens,
+                        },
+                        timeout=300,
+                    )
+                    resp.raise_for_status()
+                    data = resp.json()
+                    st.subheader("Assistant")
+                    st.write(data.get("text", ""))
+                    with st.expander("Raw API Metadata"):
+                        st.json(data)
+                except requests.exceptions.ConnectionError:
+                    st.error(f"Failed to connect to API at {API_URL}. Is the server running?")
+                except Exception as e:
+                    st.error(f"An error occurred: {e}")
 
 st.divider()
 st.caption("Tip: start the FastAPI server first, then launch this Streamlit UI.")

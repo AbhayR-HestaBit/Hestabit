@@ -3,16 +3,30 @@ from __future__ import annotations
 import json
 import time
 import uuid
+import logging
 from pathlib import Path
 from typing import Any, Dict, List, Optional
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
 from pydantic import BaseModel, Field
-from deploy.model_loader import get_model
-from deploy.config import MODEL_PATH, N_CTX, N_THREADS, N_BATCH, N_GPU_LAYERS, VERBOSE
+
+# Configure logging
+logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logger = logging.getLogger(__name__)
+
+try:
+    from deploy.model_loader import get_model
+    from deploy.config import MODEL_PATH, N_CTX, N_THREADS, N_BATCH, N_GPU_LAYERS, VERBOSE
+except ImportError:
+    logger.error("Required module 'deploy' not found. Please ensure deploy/ folder exists.")
+    # Fallback to defaults if module missing (for demonstration)
+    MODEL_PATH = "quantized/model.gguf"
+    N_CTX, N_THREADS, N_BATCH, N_GPU_LAYERS, VERBOSE = 2048, 4, 512, 0, False
+    def get_model(): return None
+
 app = FastAPI(
     title="Week 8 Local LLM API",
-    description="Day 5 FastAPI app for local GGUF model inference",
-    version="1.0.0",
+    description="Production-ready FastAPI app for local GGUF model inference",
+    version="1.1.0",
 )
 LOG_DIR = Path("logs")
 LOG_DIR.mkdir(parents=True, exist_ok=True)
@@ -37,20 +51,28 @@ class ChatRequest(BaseModel):
     top_k: int = Field(default=40, ge=1, le=200)
     repeat_penalty: float = Field(default=1.1, ge=0.5, le=2.0)
 def append_request_log(payload: Dict[str, Any]) -> None:
-    with REQUEST_LOG.open("a", encoding="utf-8") as f:
-        f.write(json.dumps(payload, ensure_ascii=False) + "\n")
+    try:
+        with REQUEST_LOG.open("a", encoding="utf-8") as f:
+            f.write(json.dumps(payload, ensure_ascii=False) + "\n")
+    except Exception as e:
+        logger.error(f"Failed to log request: {e}")
+
 def load_chat_sessions() -> Dict[str, List[Dict[str, str]]]:
     if CHAT_STORE.exists():
         try:
             return json.loads(CHAT_STORE.read_text(encoding="utf-8"))
-        except Exception:
+        except Exception as e:
+            logger.error(f"Error reading chat store: {e}")
             return {}
     return {}
 def save_chat_sessions(data: Dict[str, List[Dict[str, str]]]) -> None:
-    CHAT_STORE.write_text(
-        json.dumps(data, indent=2, ensure_ascii=False),
-        encoding="utf-8",
-    )
+    try:
+        CHAT_STORE.write_text(
+            json.dumps(data, indent=2, ensure_ascii=False),
+            encoding="utf-8",
+        )
+    except Exception as e:
+        logger.error(f"Failed to save chat sessions: {e}")
 def build_generate_prompt(prompt: str, system_prompt: Optional[str] = None) -> str:
     if system_prompt:
         return (
@@ -80,27 +102,41 @@ def run_inference(
     top_k: int,
     repeat_penalty: float,
 ) -> Dict[str, Any]:
-    llm = get_model()
-    started = time.time()
-    output = llm(
-        prompt,
-        max_tokens=max_tokens,
-        temperature=temperature,
-        top_p=top_p,
-        top_k=top_k,
-        repeat_penalty=repeat_penalty,
-        echo=False,
-    )
-    elapsed = round(time.time() - started, 4)
-    text = output["choices"][0]["text"].strip()
-    usage = output.get("usage", {})
-    return {
-        "text": text,
-        "latency_sec": elapsed,
-        "prompt_tokens": usage.get("prompt_tokens"),
-        "completion_tokens": usage.get("completion_tokens"),
-        "total_tokens": usage.get("total_tokens"),
-    }
+    logger.info(f"Running inference for prompt (len: {len(prompt)})")
+    try:
+        llm = get_model()
+        if llm is None:
+            raise RuntimeError("LLM instance is not initialized.")
+            
+        started = time.time()
+        output = llm(
+            prompt,
+            max_tokens=max_tokens,
+            temperature=temperature,
+            top_p=top_p,
+            top_k=top_k,
+            repeat_penalty=repeat_penalty,
+            echo=False,
+        )
+        elapsed = round(time.time() - started, 4)
+        text = output["choices"][0]["text"].strip()
+        usage = output.get("usage", {})
+        
+        logger.info(f"Inference completed in {elapsed}s")
+        return {
+            "text": text,
+            "latency_sec": elapsed,
+            "prompt_tokens": usage.get("prompt_tokens"),
+            "completion_tokens": usage.get("completion_tokens"),
+            "total_tokens": usage.get("total_tokens"),
+        }
+    except Exception as e:
+        logger.error(f"Critical error during inference: {str(e)}", exc_info=True)
+        return {
+            "text": "Internal error: could not generate response.",
+            "latency_sec": 0.0,
+            "error": str(e)
+        }
 @app.get("/health")
 def health() -> Dict[str, Any]:
     model_exists = Path(MODEL_PATH).exists()

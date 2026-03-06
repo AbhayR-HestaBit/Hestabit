@@ -2,6 +2,24 @@
 
 This report presents performance metrics for various model versions.
 
+## Workflow
+1. Tool Creation: Develop `inference/test_inference.py` for comparative analysis.
+2. Benchmark Execution: Test models (Base, Fine-tuned, GGUF) on a standardized prompt set.
+3. Data Collection: Record Tokens per Second (TPS), Time to First Token (TTFT), and VRAM usage.
+4. Accuracy Verification: Evaluate medical responses against pre-defined keywords for correctness.
+5. Final Reporting: Export all performance metrics into `benchmarks/results.csv`.
+
+## Flow Diagram
+```text
+Model Variants (Base, FT, GGUF) --> test_inference.py
+                                        |
+                                Benchmark Suite Run
+                                /       |       \
+                             TPS      TTFT     VRAM
+                                \       |       /
+                                 +--results.csv--+
+```
+
 ## Files Involved
 - `benchmarks/results.csv`: Table of latency and throughput benchmarks.
 - `inference/test_inference.py`: Automated performance testing script.
@@ -31,4 +49,5 @@ tokens_generated = output.shape[-1] - inputs["input_ids"].shape[-1]
 tps = tokens_generated / latency
 ```
 
-
+## Screenshots
+![Inference Benchmarking Output](screenshots/infrence.png)

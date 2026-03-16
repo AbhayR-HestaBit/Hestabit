@@ -1,0 +1,33 @@
+# Python artifacts
+__pycache__/
+*.py[cod]
+*$py.class
+.venv/
+venv/
+ENV/
+env/
+.env
+.ipynb_checkpoints
+
+# Large files and models
+models/
+*.idx
+*.index
+*.pkl
+*.db
+
+# Logs and output
+logs/
+output/
+nexus_log/
+
+# IDE files
+.vscode/
+.idea/
+.git/
+.gitignore
+
+# Docker artifacts
+Dockerfile
+docker-compose.yml
+.dockerignore

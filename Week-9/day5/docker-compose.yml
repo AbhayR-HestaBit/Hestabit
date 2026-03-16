@@ -1,0 +1,25 @@
+version: '3.8'
+
+services:
+  nexus-ai:
+    build:
+      context: .
+      dockerfile: ./nexus_ai/Dockerfile
+    image: nexus-ai:latest
+    container_name: nexus-ai-service
+    env_file:
+      - .env
+    environment:
+      - PYTHONPATH=/app
+      - NEXUS_LOG_DIR=/app/logs
+      - NEXUS_SESSION_DB=/app/memory/long_term.db
+      - NEXUS_VECTOR_INDEX=/app/memory/vector.index
+      - NEXUS_VECTOR_META=/app/memory/vector_metadata.pkl
+    volumes:
+      - ./logs:/app/logs
+      - ./memory:/app/memory
+      - ./output:/app/output
+      - ./data:/app/data
+    stdin_open: true 
+    tty: true       
+    command: ["python3", "-m", "nexus_ai.main"]
